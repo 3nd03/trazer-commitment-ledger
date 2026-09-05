@@ -18,7 +18,7 @@ Say layer 1 no matter what. Only continue to the next layer if they're still lis
 
 **Layer 2, if they pause:**
 
-> Real Hansard and Written Answers, an LLM extracts genuine commitments, then verifies each one against later records: fulfilled, in progress, or no evidence found, honestly, no padded numbers, every verdict linked to its source.
+> Real Hansard and Written Answers, an LLM extracts genuine commitments, then verifies each one against later records: fulfilled, in progress, or no evidence found. Honestly, no padded numbers. Every verdict linked to its source.
 
 **Layer 3, if they're engaged, invite the demo:**
 
@@ -35,7 +35,7 @@ Then follow their lead. Have these ready to pull up on demand:
 
 Target ~165-175 words spoken (~65-80s at a normal-to-slow pace), leaving real buffer for 5 slide transitions plus the switch to the live dashboard.
 
-**[Title slide — just said as it appears, no need to linger]**
+**[Title slide, said as it appears, no need to linger]**
 
 > Commitment Ledger. Parliament said it, did it happen?
 
@@ -47,7 +47,7 @@ Target ~165-175 words spoken (~65-80s at a normal-to-slow pace), leaving real bu
 
 > We built a pipeline that ingests real Hansard and Written Answers, has an LLM extract genuine commitments, retrieves candidate evidence, and judges each one: fulfilled, in progress, or no evidence found. No fabricated confidence. Every verdict linked to its source.
 
-**[switch to live dashboard — hero example]**
+**[switch to live dashboard, hero example]**
 
 > Take this one: recruiting 8,500 mental health workers, three years ahead of schedule. Fulfilled. Verbatim government confirmation, right here.
 
@@ -63,7 +63,7 @@ Target ~165-175 words spoken (~65-80s at a normal-to-slow pace), leaving real bu
 
 > Same data. Same words. Just tracked. Next, we bring in the spoken record too.
 
-**If it's running long in rehearsal, cut in this order**: the credibility beat first (it's the strongest differentiator but the most cuttable if desperate), then compress the Impact slide to one line ("Same access, for everyone who has to check it") rather than naming all four groups.
+**If it's running long in rehearsal, cut in this order**: the credibility beat first (it's the strongest point but also the easiest to cut if desperate), then compress the Impact slide to one line ("Same access, for everyone who has to check it") rather than naming all four groups.
 
 ---
 
@@ -71,11 +71,12 @@ Target ~165-175 words spoken (~65-80s at a normal-to-slow pace), leaving real bu
 
 - **"Where's that 80,810 / 92% figure from?"** → House of Commons Library research briefing CBP-10632, "Written parliamentary questions from MPs: Recent trends" (2025), and the Commons Procedure Committee's "Written parliamentary questions: Departmental performance in Session 2023-24". Full links are in the speaker notes on the Problem slide.
 - **"92% answered on time, so doesn't that mean it already works fine?"** → No. "Answered on time" only means a written answer was *given* by deadline. It says nothing about whether the promised action inside that answer was ever actually done. That gap is the entire premise of the tool.
-- **"Why is 'mental health' so far ahead on the topics chart?"** → It reflects how often a commitment was *restated* across multiple written answers and Hansard sittings by different ministers, not the number of distinct promises. Real parliamentary repetition, not a duplicate-counting bug — worth saying so before a judge assumes it's an error.
+- **"Why is 'mental health' so far ahead on the topics chart?"** → It reflects how often a commitment was *restated* across multiple written answers and Hansard sittings by different ministers, not the number of distinct promises. Real parliamentary repetition, not a duplicate-counting bug, worth saying so before a judge assumes it's an error.
 - **"How does 'SEARCH' actually work?"** → It's two steps, not one: embedding-based retrieval finds candidate documents, then a separate LLM pass judges whether the retrieved passage is actually evidence. Don't let "search" sound like a black box if pressed.
 - **"How do you know this is right?"** → Point at the search trail and source links. Mention the manual validation pass and the two bugs caught and fixed.
 - **"Why only 7 fulfilled out of 483?"** → Session started mid-May, most commitments genuinely haven't had time to resolve. Low fulfilled count is honest, not a failure. We'd rather show 7 real ones than pad the number.
 - **"Could this scale to other policy areas?"** → Yes, the pipeline is policy-area-agnostic (`config.py` swap). NHS was chosen for hackathon-scope reasons (data volume, team familiarity), not a technical limit.
 - **"What's the biggest weakness?"** → Embedding retrieval sometimes misses evidence that exists elsewhere in the corpus (be ready to describe the workforce-plan case briefly if asked). We chose to under-claim rather than guess.
 - **"Is this real government data?"** → Yes. Live Hansard and Written Answers APIs, not synthetic or mocked data.
-- **"Who built what?"** → *(fill in before tomorrow — have a comfortable, honest answer ready for how the 5-person team split the 9-day build, not just tonight's work)*
+- **"How did you get 15 minutes / 120 hours?"** → It's a floor, not a measurement. Manually checking one commitment means searching Hansard and Written Answers for the original wording, then reading every candidate document published since to see if any addresses it — that's the minimum for those steps alone on a narrow, familiar topic; a broader one takes longer. We didn't time real researchers, we're describing what the task itself requires. Say this plainly if asked, don't let it sound like a measured stat.
+- **"Who built what?"** → *(fill in before tomorrow, have a comfortable, honest answer ready for how the 5-person team split the 9-day build, not just tonight's work)*
