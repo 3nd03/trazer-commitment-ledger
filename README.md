@@ -1,4 +1,4 @@
-# Commitment Ledger
+# Trazer - Commitment Ledger
 
 AI tool that tracks parliamentary commitments made in Hansard and written answers, and checks whether they've been followed up. Built for the UK Parliament Hackathon with EasyA, 4 September 2026.
 
