@@ -5,7 +5,7 @@ import time
 import uuid
 from datetime import datetime, timezone
 
-import httpx2
+import httpx
 import numpy as np
 import openai
 from openai import OpenAI
@@ -21,7 +21,7 @@ claude_client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
 TOP_K = 5
 COMMIT_EVERY = 10  # persist progress periodically so a crash mid-run doesn't lose everything
 MAX_RETRIES = 3
-_RETRYABLE = (anthropic.APIConnectionError, openai.APIConnectionError, httpx2.ConnectError)
+_RETRYABLE = (anthropic.APIConnectionError, openai.APIConnectionError, httpx.ConnectError)
 
 
 def _with_retry(fn, *args, **kwargs):

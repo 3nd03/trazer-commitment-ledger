@@ -7,3 +7,4 @@ data/*.db
 data/*.csv
 data/backups/
 .DS_Store
+.claude/
